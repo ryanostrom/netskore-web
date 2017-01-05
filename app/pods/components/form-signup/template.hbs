@@ -1,0 +1,25 @@
+<div class="small-12 marbot-2 padall-1 callout alert {{if hasNoError 'hide'}} {{if userExists 'show' 'hide'}}">User Exists</div>
+
+{{#validatable-form onSubmit=(action 'signup') as |form|}}
+  {{#form-control as |error|}}
+    {{input class="marbot-1" value=firstName placeholder="First Name" autofocus="true" required="true"}}
+    {{#if error}}<p>{{error}}</p>{{/if}}
+  {{/form-control}}
+
+  {{#form-control as |error|}}
+    {{input class="marbot-1" value=lastName placeholder="Last Name" required="true"}}
+    {{#if error}}<p>{{error}}</p>{{/if}}
+  {{/form-control}}
+
+  {{#form-control as |error|}}
+    {{input class="marbot-1" value=email placeholder="Email" pattern="^(([^<>()\[\]\\.,;:\s@\"]+(\.[^<>()\[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$" required="true" title="Require Valid Email"}}
+    {{#if error}}<p>{{error}}</p>{{/if}}
+  {{/form-control}}
+
+  {{#form-control as |error|}}
+    {{input class="marbot-1" value=password placeholder="Password" type="password" pattern=".{6,}" required="true" title="Require 6 Characters"}}
+    {{#if error}}<p>{{error}}</p>{{/if}}
+  {{/form-control}}
+
+  <input class="button expanded primary marbot-1" {{action 'submit' target=form}} value="Signup!">
+{{/validatable-form}}

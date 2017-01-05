@@ -1,0 +1,4 @@
+<div id="invalid-login" class="small-12 marbot-2 padall-1 callout alert {{if hasNoError 'hide'}}">Your email or password is invalid.</div>
+{{input class="marbot-1" value=email placeholder="Email" autofocus="true"}}
+{{input class="marbot-1" value=password placeholder="Password" type="password"}}
+<div class="button expanded primary marbot-1" {{action 'login'}}>Login!</div>

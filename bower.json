@@ -1,0 +1,13 @@
+{
+  "name": "ember",
+  "dependencies": {
+    "ember": "~2.7.0",
+    "ember-cli-shims": "0.1.1",
+    "ember-qunit-notifications": "0.1.0",
+    "jquery": "1.11.3",
+    "foundation": "~4.3.2",
+    "pikaday": "^1.4.0",
+    "bootstrap-datepicker": "^1.6.0",
+    "font-awesome": "~4.5.0"
+  }
+}

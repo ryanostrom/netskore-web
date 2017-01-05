@@ -1,0 +1,8 @@
+<nav>
+  <ul>
+    {{#each nav.menu as |item|}}
+      <li>{{#link-to item.route class=item.class}}{{item.label}}{{/link-to}}</li>
+    {{/each}}
+  </ul>
+  {{#link-to 'index' }}<h1>Ember-Symfony</h1>{{/link-to}}
+</nav>
