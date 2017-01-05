@@ -8,7 +8,7 @@ export default Ember.Route.extend({
     this.cookie.removeCookie('user');
 
     return Ember.RSVP.hash({
-      users: this.get('ajax').request('users')
+      users: this.get('ajax').request('http://api.netskore.com/users')
     });
   },
 
